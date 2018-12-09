@@ -1,0 +1,3 @@
+ng new AppInOut
+ng generate class clases/alumno
+ng generate conponent componentes/alumno
