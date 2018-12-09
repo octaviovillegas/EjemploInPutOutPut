@@ -1,3 +1,5 @@
 ng new AppInOut
 ng generate class clases/alumno
-ng generate conponent componentes/alumno
+ng generate component componentes/alumno
+ng generate component componentes/listadoAlumnos
+ng generate component componentes/detalleAlumnos
