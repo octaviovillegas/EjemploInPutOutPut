@@ -7,12 +7,18 @@ import { AlumnoComponent } from './componentes/alumno/alumno.component';
 import { FormsModule } from '@angular/forms';
 import { ListadoAlumnosComponent } from './componentes/listado-alumnos/listado-alumnos.component';
 import { DetalleAlumnosComponent } from './componentes/detalle-alumnos/detalle-alumnos.component';
+import { ProfesorComponent } from './componentes/profesor/profesor.component';
+import { DetalleProfesorComponent } from './componentes/detalle-profesor/detalle-profesor.component';
+import { ListadoProfesorComponent } from './componentes/listado-profesor/listado-profesor.component';
 @NgModule({
   declarations: [
     AppComponent,
     AlumnoComponent,
     ListadoAlumnosComponent,
-    DetalleAlumnosComponent
+    DetalleAlumnosComponent,
+    ProfesorComponent,
+    DetalleProfesorComponent,
+    ListadoProfesorComponent
   ],
   imports: [
     FormsModule,

@@ -43,8 +43,8 @@
 			<hr>
 			<div id="principal">
 
-					<app-listado-alumnos [listadoAlumnos]="listadoPrincipal"    (alumnoSeleccionado)="tomarAlumnoParaDetalles($event)"></app-listado-alumnos>
-					
+					<!--app-listado-alumnos [listadoAlumnos]="listadoPrincipal"    (alumnoSeleccionado)="tomarAlumnoParaDetalles($event)"></app-listado-alumnos-->
+					<app-listado-profesor></app-listado-profesor>
 			</div>		
 
 		</article>
@@ -66,8 +66,8 @@
 				<div id="informe">
 
 
-		 			 <app-alumno (alumnoCreado)="tomarAlumnoCreado($event)"></app-alumno>
-		  
+		 			 <!--app-alumno (alumnoCreado)="tomarAlumnoCreado($event)"></app-alumno-->
+					<app-profesor (SeCreoUnProfesor)="mostrarProfesor($event)"></app-profesor>
 
 				</div>
 			
@@ -76,8 +76,9 @@
 			<h4 class="widgettitle">Detalle </h4>
 				<div id="error">
 
-						<app-detalle-alumnos [alumnoParaMostrar]="alumnoSeleccionado"    > </app-detalle-alumnos>
-				</div>
+						<!--app-detalle-alumnos [alumnoParaMostrar]="alumnoSeleccionado"    > </app-detalle-alumnos-->
+						<app-detalle-profesor [unProfesor]="profesorParaMostrar"></app-detalle-profesor>
+					</div>
 			
 		</section>
 		<!-- /.widget -->
