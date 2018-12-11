@@ -11,6 +11,7 @@ export class AppComponent {
   listadoPrincipal: Alumno[] ;
   alumnoSeleccionado:Alumno;
   profesorParaMostrar:Profesor;
+  ListadoProfesoresPrincipal:Profesor[];
 
   constructor() { 
         this.profesorParaMostrar= new Profesor("newton","fisica",777);
@@ -18,6 +19,8 @@ export class AppComponent {
           { apellido: 'Aguas' ,nombre:"rogelio",legajo: 666 },
           { apellido: 'Mercurio' ,nombre:"Alfredo",legajo: 333 }
         ];
+
+        this.ListadoProfesoresPrincipal=[];
     }
   tomarAlumnoCreado(NuevoAlumno: Alumno)
   {
@@ -27,8 +30,14 @@ export class AppComponent {
   {
     this.alumnoSeleccionado=NuevoAlumno;   
   }
-  mostrarProfesor(unProfesor:Profesor)
+  tomarProfesorParaDetalles(NuevoProfe: Profesor)
   {
-      console.info("profesor",this.profesorParaMostrar);
+    this.profesorParaMostrar=NuevoProfe;   
+  }
+  mostrarProfesor(parametroProfesor:Profesor)
+  {
+      console.info("profesor",parametroProfesor);
+      //this.profesorParaMostrar=parametroProfesor;
+      this.ListadoProfesoresPrincipal.push(parametroProfesor);
   }
 }

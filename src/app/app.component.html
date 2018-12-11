@@ -44,7 +44,7 @@
 			<div id="principal">
 
 					<!--app-listado-alumnos [listadoAlumnos]="listadoPrincipal"    (alumnoSeleccionado)="tomarAlumnoParaDetalles($event)"></app-listado-alumnos-->
-					<app-listado-profesor></app-listado-profesor>
+					<app-listado-profesor [listadoProfesores]="ListadoProfesoresPrincipal"  (profesorSeleccionado)="tomarProfesorParaDetalles($event)"></app-listado-profesor>
 			</div>		
 
 		</article>

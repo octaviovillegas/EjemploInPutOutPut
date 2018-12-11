@@ -11,16 +11,24 @@ export class ProfesorComponent implements OnInit {
   
   nuevoProfesor:Profesor;
   
-  constructor() { }
+  constructor() {
+    
+   }
 
   ngOnInit() {
+ //   this.nuevoProfesor=new Profesor("n","n",0);
   }
 
   crearProfesor()
   {
     //hacer cosas
-    this.nuevoProfesor=new Profesor("fonte","analisis",666);
+  
     this.SeCreoUnProfesor.emit(this.nuevoProfesor);
+    this.nuevoProfesor=null;
   }
+  hacerNuevoProfesor()
+  {
+    this.nuevoProfesor=new Profesor("n","n",0);
 
+  }
 }
