@@ -1,8 +1,11 @@
 #entrega de TP final del curso
 
-1- se debe hacer fork de este repositorio
-2-crear la carpeta TPFinal-apellido en ese repositorio
-3- subir el repositorio a su github
+1- se debe hacer fork de este repositorio.
+
+2-crear la carpeta TPFinal-apellido en ese repositorio.
+
+3- subir el repositorio a su github.
+
 ## consultas octaviovillegas@ymail.com
 
 
