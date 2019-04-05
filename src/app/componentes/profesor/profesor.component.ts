@@ -22,7 +22,8 @@ export class ProfesorComponent implements OnInit {
   crearProfesor()
   {
     //hacer cosas
-  
+    let legajo:number =Math.floor((Math.random() * 1000) + 1);
+    this.nuevoProfesor.legajo=legajo;
     this.SeCreoUnProfesor.emit(this.nuevoProfesor);
     this.nuevoProfesor=null;
   }

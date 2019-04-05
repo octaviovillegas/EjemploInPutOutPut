@@ -9,6 +9,11 @@ ng generate class clases/profesor
 ng generate component componentes/profesor
 ng generate component componentes/detalleProfesor
 ng generate component componentes/listadoProfesor
+
+ng generate component componentes/tablaProfesor
+ng generate component componentes/filaProfesor
+
+
      _                      _                 ____ _     ___
     / \   _ __   __ _ _   _| | __ _ _ __     / ___| |   |_ _|
    / △ \ | '_ \ / _` | | | | |/ _` | '__|   | |   | |    | |
