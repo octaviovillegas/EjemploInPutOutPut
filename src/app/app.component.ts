@@ -14,13 +14,16 @@ export class AppComponent {
   ListadoProfesoresPrincipal:Profesor[];
 
   constructor() { 
-        this.profesorParaMostrar= new Profesor("newton","fisica",777);
+        this.profesorParaMostrar= new Profesor("Clementina","Programacion",777);
         this.listadoPrincipal = [
           { apellido: 'Aguas' ,nombre:"rogelio",legajo: 666 },
           { apellido: 'Mercurio' ,nombre:"Alfredo",legajo: 333 }
         ];
 
-        this.ListadoProfesoresPrincipal=[];
+        this.ListadoProfesoresPrincipal= [
+          { apellido: "Alvarez" ,materia:"matematicas",legajo: 666 },
+          { apellido: "Villagran" ,materia:"prog 1",legajo: 333 }
+        ];
     }
   tomarAlumnoCreado(NuevoAlumno: Alumno)
   {

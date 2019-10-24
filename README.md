@@ -1,25 +1,6 @@
-#entrega de TP final del curso
+# EjemploInPutOutPut2019
 
-1- se debe hacer fork de este repositorio.
-
-2-crear la carpeta TPFinal-apellido en ese repositorio.
-
-3- subir el repositorio a su github.
-
-## consultas octaviovillegas@ymail.com
-
-
-# AppInOut
-
-
-https://goo.gl/forms/bdUuNML035u7MTDy1 encuesta 
-
-
-
-
-
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.2.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.0.
 
 ## Development server
 
