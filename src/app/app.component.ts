@@ -8,21 +8,25 @@ import { Profesor } from './clases/profesor';
 })
 export class AppComponent {
   title = 'Ejemplo  @Input()  @Output()  ';
-  listadoPrincipal: Alumno[] ;
-  alumnoSeleccionado:Alumno;
-  profesorParaMostrar:Profesor;
-  ListadoProfesoresPrincipal:Profesor[];
+  ListadoAlumnosPrincipal: Alumno[] ;
+  alumnoSeleccionado: Alumno;
+  profesorParaMostrar: Profesor;
+  ListadoProfesoresPrincipal: Profesor[];
 
   constructor() { 
-        this.profesorParaMostrar= new Profesor("Clementina","Programacion",777);
-        this.listadoPrincipal = [
+        this.profesorParaMostrar = new Profesor("Clementina","Programacion",777);
+        this.listadoPrincipal= [
           { apellido: 'Aguas' ,nombre:"rogelio",legajo: 666 },
           { apellido: 'Mercurio' ,nombre:"Alfredo",legajo: 333 }
         ];
 
-        this.ListadoProfesoresPrincipal= [
+        this.ListadoProfesoresPrincipal = [
           { apellido: "Alvarez" ,materia:"matematicas",legajo: 666 },
           { apellido: "Villagran" ,materia:"prog 1",legajo: 333 }
+        ];
+        this.ListadoAlumnosPrincipal = [
+          { apellido: "quito" ,nombre:"esteban",legajo: 111 },
+          { apellido: "pescador" ,nombre:"matin",legajo: 222 }
         ];
     }
   tomarAlumnoCreado(NuevoAlumno: Alumno)

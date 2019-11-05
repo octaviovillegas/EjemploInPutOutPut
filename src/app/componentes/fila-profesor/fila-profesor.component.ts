@@ -8,14 +8,13 @@ import { Profesor } from '../../clases/profesor';
 })
 export class FilaProfesorComponent implements OnInit {
 @Output() profesorSeleccionado: EventEmitter<any>= new EventEmitter<any>(); 
-@Input() unProfesor:Profesor;
+@Input() unProfesor: Profesor;
   constructor() { }
 
   ngOnInit() {
   }
-  mostrarDetalles(parametroProfesor)
-  {
-  	console.log(" fila");
-    this.profesorSeleccionado.emit(parametroProfesor);
+  mostrarDetalles(parametroProfesor) {// tslint:disable-next-line: indent
+  	console.log(' fila');
+   this.profesorSeleccionado.emit(parametroProfesor);
   }
 }

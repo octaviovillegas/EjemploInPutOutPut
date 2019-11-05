@@ -1,0 +1,17 @@
+<table border=1>
+    <thead>
+        <th>legajo</th>
+        <th>nombre</th>
+        <th>apellido</th>
+        <th>boton</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let alumno of listadoAlumnos" appFilaAlumno [unAlumno]="alumno" (alumnoSeleccionado)="mostrarDetalles($event)">
+            <!--td class="badge">{{alumno.legajo}}</td>
+            <td> {{alumno.nombre}} </td>
+            <td> {{alumno.apellido}} </td>
+            <td> <button type="button" class="btn btn-info btn-circle" (click)="mostrarDetalles(alumno)"><i class="fa fa-check"></i>
+            </button></td-->
+        </tr>
+    </tbody>
+</table>

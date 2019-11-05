@@ -1,101 +1,99 @@
-
-
 <!-- media queries css -->
- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
 <div id="pagewrap">
 
-  <header id="header">
+    <header id="header">
 
-  
-      <h1 id="site-logo"><a href="#">Principal</a></h1>
-      <h2 id="site-description">{{title}}</h2>
-    
-    <nav>
 
-      <ul id="main-nav" class="clearfix">
-        <li><a  class="btn">Alumnos<br> ABM</a></li>
-        <li><a  class="btn">Catedras<br>ABM</a> </li>
-        <li><a  class="btn">Examenes<br>ABM </a> </li>
-      
-        
-        <li> <a  class="btn btn-success">mas-></a> </li>
-        
-      </ul>
-      <!-- /#main-nav --> 
-    </nav>
+        <h1 id="site-logo"><a href="#">Principal</a></h1>
+        <h2 id="site-description">{{title}}</h2>
 
-    <form id="searchform">
-      <input type="search" id="usuario" readonly placeholder="Sin Usuario">
-    </form>
+        <nav>
 
-  </header>
-  <!-- /#header -->
-  
-  <div id="content" >
+            <ul id="main-nav" class="clearfix">
+                <li><a class="btn">Alumnos<br> ABM</a></li>
+                <li><a class="btn">Catedras<br>ABM</a> </li>
+                <li><a class="btn">Examenes<br>ABM </a> </li>
 
-    <article  class="post clearfix">
 
-      <header  >
-        <h1 class="post-title"><a href="#">Listado</a></h1>
-        <p class="post-meta"><time class="post-date" datetime="2018-12" pubdate>2018</time> <em>en</em> <a href="#">UTN FRA</a></p>
-      </header>
-      <hr>
-      <div id="principal">
+                <li> <a class="btn btn-success">mas-></a> </li>
 
-          <!--app-listado-alumnos [listadoAlumnos]="listadoPrincipal"    (alumnoSeleccionado)="tomarAlumnoParaDetalles($event)"></app-listado-alumnos-->
-          <!--app-listado-profesor [listadoProfesores]="ListadoProfesoresPrincipal"  (profesorSeleccionado)="tomarProfesorParaDetalles($event)"></app-listado-profesor-->
+            </ul>
+            <!-- /#main-nav -->
+        </nav>
 
-          <app-tabla-profesor [listadoProfesores]="ListadoProfesoresPrincipal"
-           (profesorSeleccionado)="tomarProfesorParaDetalles($event)" ></app-tabla-profesor>    
-      </div>    
+        <form id="searchform">
+            <input type="search" id="usuario" readonly placeholder="Sin Usuario">
+        </form>
 
-    </article>
-    <!-- /.post -->
+    </header>
+    <!-- /#header -->
 
-  </div>
-  <!-- /#content --> 
-  
-  
-  <aside id="sidebar">
+    <div id="content">
 
-    <div id="botonesABM">
-        <!--contenido dinamico cargado por ajax-->
+        <article class="post clearfix">
+
+            <header>
+                <h1 class="post-title"><a href="#">Listado</a></h1>
+                <p class="post-meta"><time class="post-date" datetime="2018-12" pubdate>2018</time> <em>en</em> <a href="#">UTN FRA</a></p>
+            </header>
+            <hr>
+            <div id="principal">
+
+                <!--app-listado-alumnos [listadoAlumnos]="listadoPrincipal"    (alumnoSeleccionado)="tomarAlumnoParaDetalles($event)"></app-listado-alumnos-->
+                <!--app-listado-profesor [listadoProfesores]="ListadoProfesoresPrincipal"  (profesorSeleccionado)="tomarProfesorParaDetalles($event)"></app-listado-profesor-->
+
+                <!--app-tabla-profesor [listadoProfesores]="ListadoProfesoresPrincipal"
+           (profesorSeleccionado)="tomarProfesorParaDetalles($event)" ></app-tabla-profesor-->
+                <app-tabla-alumno [listadoAlumnos]="ListadoAlumnosPrincipal" (alumnoSeleccionado)="tomarAlumnoParaDetalles($event)"></app-tabla-alumno>
+            </div>
+
+        </article>
+        <!-- /.post -->
+
     </div>
-    <!-- /.widget -->
-
-    <section class="widget clearfix" >
-      <h4 class="widgettitle">Alta </h4>
-        <div id="informe">
+    <!-- /#content -->
 
 
-           <!--app-alumno (alumnoCreado)="tomarAlumnoCreado($event)"></app-alumno-->
-          <app-profesor (SeCreoUnProfesor)="mostrarProfesor($event)"></app-profesor>
+    <aside id="sidebar">
 
+        <div id="botonesABM">
+            <!--contenido dinamico cargado por ajax-->
         </div>
-      
-    </section>
-    <section class="widget clearfix" >
-      <h4 class="widgettitle">Detalle </h4>
-        <div id="error">
+        <!-- /.widget -->
 
-            <!--app-detalle-alumnos [alumnoParaMostrar]="alumnoSeleccionado"    > </app-detalle-alumnos-->
-            <app-detalle-profesor [unProfesor]="profesorParaMostrar"></app-detalle-profesor>
-          </div>
-      
-    </section>
-    <!-- /.widget -->
-            
-  </aside>
-  <!-- /#sidebar -->
+        <section class="widget clearfix">
+            <h4 class="widgettitle">Alta </h4>
+            <div id="informe">
 
-  <footer id="footer">
-  
-    <p>templete by <a href="http://www.octavio.com.ar">Octavio Villegas</a></p>
 
-  </footer>
-  <!-- /#footer --> 
-  
+                <!--app-alumno (alumnoCreado)="tomarAlumnoCreado($event)"></app-alumno-->
+                <app-profesor (SeCreoUnProfesor)="mostrarProfesor($event)"></app-profesor>
+
+            </div>
+
+        </section>
+        <section class="widget clearfix">
+            <h4 class="widgettitle">Detalle </h4>
+            <div id="error">
+
+                <!--app-detalle-alumnos [alumnoParaMostrar]="alumnoSeleccionado"    > </app-detalle-alumnos-->
+                <app-detalle-profesor [unProfesor]="profesorParaMostrar"></app-detalle-profesor>
+            </div>
+
+        </section>
+        <!-- /.widget -->
+
+    </aside>
+    <!-- /#sidebar -->
+
+    <footer id="footer">
+
+        <p>template by <a href="http://www.octavio.com.ar">Octavio Villegas</a></p>
+
+    </footer>
+    <!-- /#footer -->
+
 </div>
 <!-- /#pagewrap -->
-
